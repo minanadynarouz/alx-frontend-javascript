@@ -1,6 +1,11 @@
 // eslint-disable-next-line
-function getResponseFromAPI() {
-    return new Promise((res, rej) => {
-        res('Success');
-    })
+function getResponseFromAPI(success) {
+  return new Promise((res, rej) => {
+    if (success) {
+      res('Success');
+    }
+    rej(Error('Error'));
+  });
 }
+
+export default getResponseFromAPI;
