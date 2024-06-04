@@ -2,7 +2,7 @@ import signUpUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
 
 export default function handleProfileSignup(firstName, LastName, fileName) {
-  const promises = [signUpUser(firstName, LastName), uploadPhoto(fileName)];
+  const promises = [signUpUser(firstName, lastName), uploadPhoto(fileName)];
 
   return Promise.allSettled(promises)
     .then((results) => {
@@ -13,6 +13,6 @@ export default function handleProfileSignup(firstName, LastName, fileName) {
             value: result.value
           }
         ]
-      })
-    })
+      });
+    });
 }
