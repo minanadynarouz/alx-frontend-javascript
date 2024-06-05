@@ -31,7 +31,7 @@ export default class Pricing extends Currency {
   }
 
   displayFullPrice() {
-    return `${this._amount} ${this._currency} (${this._code})`;
+    return `${this._amount} ${Currency._name} (${Currency._code})`;
   }
 
   static convertPrice(amount, conversionRate) {
