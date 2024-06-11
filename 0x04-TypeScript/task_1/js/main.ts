@@ -7,3 +7,9 @@ interface Teacher {
   contract: boolean,
   [key: string]: any;
 }
+
+// Define the Directors interface
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
